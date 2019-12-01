@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-int64_t calculate_fuel(int64_t mass) {
-        int64_t fuel = mass / 3 - 2;
+uint64_t calculate_fuel(const uint64_t mass) {
+        const int64_t fuel = mass / 3 - 2;
         if (fuel <= 0) return 0;
         return fuel + calculate_fuel(fuel);
 }
