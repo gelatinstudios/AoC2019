@@ -29,10 +29,11 @@ void exec(int Intcode[], const int noun, const int verb) {
 }
 
 int main(void) {
-        char str[500] = {0};
-        fgets(str, 500, stdin);
+        char *str = 0;
+        size_t size;
+        getline(&str, &size, stdin);
 
-        int Intcode[500] = {0};
+        int Intcode[size / 2];
         size_t count = 0;
         char *token = strtok(str, ",");
         while(token) {
@@ -40,6 +41,7 @@ int main(void) {
                 ++count;
                 token = strtok(0, ",");
         }
+        free(str);
 
         //printf("%zu instructions parsed\n", count);
 
