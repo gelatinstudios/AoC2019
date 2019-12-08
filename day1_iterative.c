@@ -1,5 +1,5 @@
 
-//alternative iterative solution
+//alternate iterative solution
 
 #include <stdio.h>
 #include <stdlib.h>
