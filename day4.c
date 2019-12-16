@@ -21,7 +21,7 @@ static inline digits to_digits(size_t n) {
 
 int main(void) {
         size_t begin, end;
-        scanf("%zu-%zu", &begin, &end);
+        scanf("%zu%*c%zu", &begin, &end);
         size_t count_one = 0;
         size_t count_two = 0;
         for (size_t i = begin; i < end; ++i) {

@@ -10,9 +10,9 @@ uint64_t calculate_fuel(const uint64_t mass) {
 }
 
 int main(void) {
-        char str[30];
+        char str[32];
         uint64_t fuel_sum = 0;
-        while(fgets(str, 30, stdin)) {
+        while(fgets(str, 32, stdin)) {
                 fuel_sum += calculate_fuel(atol(str));
         }
 
