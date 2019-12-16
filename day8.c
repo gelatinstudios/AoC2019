@@ -9,7 +9,6 @@ int main(void) {
         for (size_t i = 0; i < 25*6; ++i)
                 image[i] = 2;
 
-        size_t current_zeroes = 0;
         size_t min_zeroes = 25 * 6;
         size_t zero_count = 0;
         size_t one_count = 0;

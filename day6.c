@@ -52,6 +52,8 @@ size_t find_santa(object *ptr, object *list[], size_t n, const char *str) {
                 const size_t count = find_santa(ptr->orbited_by[i], list, n, str);
                 if (count) return count;
         }
+
+        return 0;
 }
 
 int main(void) {
@@ -80,6 +82,7 @@ int main(void) {
 
                 line = strtok(0, "\n");
         }
+        free(str);
 
         assert(com);
         traverse(com, 0);
@@ -97,6 +100,5 @@ int main(void) {
         const size_t transfers = san_count + you_count - 2*n;
         printf("Part Two: %zu\n", transfers);
 
-        free(str);
         free(tree);
 }
