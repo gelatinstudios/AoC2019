@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc "day$1.c" -o "exe/day$1" -Wall -Wpedantic -Wextra
+gcc "day$1.c" -o "exe/day$1" -Wall -Wpedantic -Wextra -lgmp -g
 cat "input$1.txt" | "exe/day$1"
