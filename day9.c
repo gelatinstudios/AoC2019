@@ -31,9 +31,9 @@ void exec(mpz_t Intcode[], const long input) {
                 const mode param_mode_2 = instruction % 10000 / 1000;
                 const mode param_mode_3 = instruction / 10000;
 
-                mpz_t *param1 = param(param_mode_1, relative_base, Intcode, i+1);
-                mpz_t *param2 = param(param_mode_2, relative_base, Intcode, i+2);
-                mpz_t *param3 = param(param_mode_3, relative_base, Intcode, i+3);
+                mpz_t *const param1 = param(param_mode_1, relative_base, Intcode, i+1);
+                mpz_t *const param2 = param(param_mode_2, relative_base, Intcode, i+2);
+                mpz_t *const param3 = param(param_mode_3, relative_base, Intcode, i+3);
 
                 switch (opcode) {
                         case 1:
@@ -115,10 +115,9 @@ int main(void) {
 
         printf("Part One: ");
         exec(Intcode, 1);
-        memcpy(Intcode, IntcodeCopy, IntcodeBytes);
 
         printf("Part Two: ");
-        exec(Intcode, 2);
+        exec(IntcodeCopy, 2);
 
         free(Intcode);
         free(IntcodeCopy);
