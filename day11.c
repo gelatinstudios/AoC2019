@@ -222,8 +222,8 @@ int main(void) {
                                             if (painted_panels[i].color) {
                                                 found = true;
                                                 putchar('#');
-                                                break;
                                             }
+                                            break;
                                 }
                         }
                         if (!found) putchar('.');
