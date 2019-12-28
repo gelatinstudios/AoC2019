@@ -1,7 +1,5 @@
 #!/bin/bash
 gcc "day$1.c" -o "exe/day$1" -Wall -Wpedantic -Wextra "${@:2}"
-if [ $? -ne 0 ] ; then
-        exit 1
-else
+if [ $? -eq 0 ] ; then
         cat "input$1.txt" | "exe/day$1"
 fi
